@@ -1,0 +1,39 @@
+{
+  "name": "claude-file-paste",
+  "displayName": "Claude File Paste",
+  "description": "Seamlessly paste any files from clipboard into VS Code terminal for Claude Code conversations",
+  "version": "1.2.0",
+  "publisher": "Claude",
+  "author": {
+    "name": "Claude",
+    "email": "claude@anthropic.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claude/vscode-claude-file-paste"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other", "Snippets"],
+  "keywords": ["claude", "ai", "assistant", "file", "paste", "clipboard"],
+  "activationEvents": ["onCommand:claude-file-paste.pasteFile"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "claude-file-paste.pasteFile",
+      "title": "Paste File for Claude",
+      "category": "Claude"
+    }],
+    "keybindings": [{
+      "command": "claude-file-paste.pasteFile",
+      "key": "ctrl+shift+alt+i",
+      "when": "terminalFocus"
+    }]
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/vscode": "^1.74.0"
+  }
+}
